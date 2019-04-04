@@ -1,5 +1,10 @@
 # BHQrCode
 
+# Dependency
+```
+TZImagePickerController (3.2.0)
+```
+
 # Install
 ```
 pod 'BHQrCode'
