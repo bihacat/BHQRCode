@@ -26,18 +26,18 @@ BHScanController *scan = [[BHScanController alloc] initWithScanComplete:^(NSStri
 [self presentViewController:scan animated:true completion:nil];
 ```
 
-识别指定二维码内容
-```
-NSArray *string = [BHScanTools identify:img];
-NSLog(@"%@", string);
-```
-
 生成二维码图片
 
 ```
-UIImage *img = [BHScanTools generate:@"This is My Img" width:400];
+UIImage *img = [BHScanTools generate:@"http://www.bihacat.com" width:400];
 UIImageView *imgV = [[UIImageView alloc] initWithImage:img];
 [self.view addSubview:imgV];
+```
+
+识别指定二维码内容
+```
+NSString *string = [BHScanTools identify:img].firstObject;
+NSLog(@"%@", string); // "http://www.bihacat.com"
 ```
 
 Apis
