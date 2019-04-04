@@ -66,7 +66,7 @@
 @property (nonatomic, assign) CGRect introduceFrame;
 
 /**
- 无拍照权限时提示的appname
+ 无拍照权限时提示的应用名，默认为当前应用名
  */
 @property (nonatomic, copy) NSString *appName;
 
