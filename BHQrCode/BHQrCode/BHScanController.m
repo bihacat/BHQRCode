@@ -154,7 +154,7 @@
         UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:_navigationTitleText];
         [_navigationBar pushNavigationItem:navigationItem animated:true];
         NSString *bundlePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"BHQrCode" ofType:@"bundle"];
-        NSString *imagePath = [[NSBundle bundleWithPath:bundlePath] pathForResource:@"close" ofType:@"png"];
+        NSString *imagePath = [[NSBundle bundleWithPath:bundlePath] pathForResource:@"close@2x" ofType:@"png"];
         UIImage *image = [[UIImage imageWithContentsOfFile:imagePath] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         UIBarButtonItem *closeItem = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(dismissController)];
         navigationItem.leftBarButtonItem = closeItem;

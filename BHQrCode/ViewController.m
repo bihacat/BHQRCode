@@ -18,12 +18,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImage *img = [BHScanTools generate:@"This is My Img" width:400];
-    UIImageView *imgV = [[UIImageView alloc] initWithImage:img];
-    [self.view addSubview:imgV];
+//    UIImage *img = [BHScanTools generate:@"This is My Img" width:400];
+//    UIImageView *imgV = [[UIImageView alloc] initWithImage:img];
+//    [self.view addSubview:imgV];
+//
+//    NSArray *string = [BHScanTools identify:img];
+//    NSLog(@"%@", string);
     
-    NSArray *string = [BHScanTools identify:img];
-    NSLog(@"%@", string);
+    
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    BHScanController *scan = [[BHScanController alloc] initWithScanComplete:^(NSString *result, BHScanController *capture) {
+        NSLog(@"the result is %@", result);
+    }];
+    [self presentViewController:scan animated:true completion:nil];
 }
 
 @end

@@ -73,12 +73,12 @@ typedef NS_ENUM(NSUInteger, LineMoveDirect) {
     NSBundle *captureBundle = [NSBundle bundleWithPath:bundlePath];
     
     _scanImageView = [[UIImageView alloc] initWithFrame:_scanFrame];
-    NSString *bgPath = [captureBundle pathForResource:@"scan_bg_pic" ofType:@"png"];
+    NSString *bgPath = [captureBundle pathForResource:@"scan_bg_pic@2x" ofType:@"png"];
     _scanImageView.image = [[UIImage alloc] initWithContentsOfFile:bgPath];
     [self addSubview:_scanImageView];
     
     _scanLine = [[UIImageView alloc] initWithFrame:CGRectMake(_scanFrame.origin.x, _scanFrame.origin.y, _scanFrame.size.width, 2)];
-    NSString *linePath = [captureBundle pathForResource:@"scan_line" ofType:@"png"];
+    NSString *linePath = [captureBundle pathForResource:@"scan_line@2x" ofType:@"png"];
     _scanLine.image = [[UIImage alloc] initWithContentsOfFile:linePath];
     [self addSubview:_scanLine];
     
