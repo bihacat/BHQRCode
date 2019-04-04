@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "BHScanController.h"
+#import "BHScanTools.h"
 
 @interface ViewController ()
 
@@ -16,8 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    UIImage *img = [BHScanTools generate:@"This is My Img" width:400];
+    UIImageView *imgV = [[UIImageView alloc] initWithImage:img];
+    [self.view addSubview:imgV];
+    
+    NSArray *string = [BHScanTools identify:img];
+    NSLog(@"%@", string);
 }
-
 
 @end
