@@ -2,8 +2,8 @@
 //  BHScanController.m
 //  BHScanController
 //
-//  Created by tianfengyu on 2017/6/9.
-//  Copyright © 2017年 Bihacat. All rights reserved.
+//  Created by bihacat on 2017/6/9.
+//  Copyright © 2017年 bihacat. All rights reserved.
 //
 
 #import "BHScanController.h"
@@ -28,7 +28,7 @@
 @property (nonatomic, strong) NSDictionary *originalTitleTextAttributes;
 @property (nonatomic, strong) UIColor *originalTintColor;
 @property (nonatomic, strong) UIImage *originalShadowImage;
-@property (nonatomic, strong) UIImage *originalBackgroundImage;
+@property (nonatomic, strong) UIImage *originalBackgroundImage; //
 
 
 @end
@@ -327,6 +327,11 @@
     _introduceFont = introduceFont;
     _scanView.introduceLabel.font = introduceFont;
     [_scanView.introduceLabel sizeToFit];
+}
+
+- (void)setIntroduceTextAlignment:(NSTextAlignment)introduceTextAlignment {
+    _introduceTextAlignment = introduceTextAlignment;
+    _scanView.introduceLabel.textAlignment = introduceTextAlignment;
 }
 
 - (void)setIntroduceTextColor:(UIColor *)introduceTextColor {

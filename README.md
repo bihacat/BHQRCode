@@ -11,7 +11,7 @@ pod 'BHQrCode'
 BHScanController *scan = [[BHScanController alloc] initWithScanComplete:^(NSString *result, BHScanController *capture) {
     NSLog(@"the result is %@", result);
 }];
-[self.navigationController presentViewController:scan animated:true completion:nil];
+[self.navigationController pushViewController:scan animated:true completion:nil];
 ```
 
 ```

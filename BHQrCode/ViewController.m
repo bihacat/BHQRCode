@@ -2,7 +2,7 @@
 //  ViewController.m
 //  BHQrCode
 //
-//  Created by tian on 2019/4/4.
+//  Created by bihacat on 2019/4/4.
 //  Copyright © 2019 bihacat. All rights reserved.
 //
 
@@ -30,10 +30,16 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    BHScanController *scan = [[BHScanController alloc] initWithScanComplete:^(NSString *result, BHScanController *capture) {
-        NSLog(@"the result is %@", result);
+//    BHScanController *scan = [[BHScanController alloc] initWithScanComplete:^(NSString *result, BHScanController *capture) {
+//        NSLog(@"the result is %@", result);
+//    }];
+    BHScanController *scan = [[BHScanController alloc] initWithScanFrame:CGRectMake(50, 185.5, 314, 314) complete:^(NSString *result, BHScanController *capture) {
+        
     }];
-    [self presentViewController:scan animated:true completion:nil];
+    scan.introduceText = @"abc";
+    [self presentViewController:scan animated:true completion:^{
+        scan.view.frame = CGRectMake(0, 0, 414, 685);
+    }];
 }
 
 @end

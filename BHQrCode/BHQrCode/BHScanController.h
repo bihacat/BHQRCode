@@ -2,14 +2,15 @@
 //  BHScanController.h
 //  BHScanController
 //
-//  Created by tianfengyu on 2017/6/9.
-//  Copyright © 2017年 Bihacat. All rights reserved.
+//  Created by bihacat on 2017/6/9.
+//  Copyright © 2017年 bihacat. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface BHScanController : UIViewController
 
+#pragma mark - 界面
 /**
  扫码线图片
  */
@@ -40,6 +41,7 @@
  */
 @property (nonatomic, assign) CGFloat coverViewAlpha;
 
+#pragma mark - 文字
 /**
  提示文字内容
  */
@@ -61,6 +63,11 @@
 @property (nonatomic, strong) UIColor *introduceTextColor;
 
 /**
+ 提示文字对齐方式, 默认:居中
+ */
+@property (nonatomic, assign) NSTextAlignment introduceTextAlignment;
+
+/**
  提示文字位置
  */
 @property (nonatomic, assign) CGRect introduceFrame;
@@ -70,6 +77,7 @@
  */
 @property (nonatomic, copy) NSString *appName;
 
+#pragma mark - 导航栏
 /**
  导航栏文字、按钮颜色 默认白色
  */
@@ -95,6 +103,7 @@
  */
 @property (nonatomic, assign) BOOL showAlbum;
 
+#pragma mark - 方法
 /**
  初始化方法(默认扫码区宽高为屏幕宽度-100, 居中显示)
  

@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  BHQrCode
 //
-//  Created by tian on 2019/4/4.
+//  Created by bihacat on 2019/4/4.
 //  Copyright © 2019 bihacat. All rights reserved.
 //
 

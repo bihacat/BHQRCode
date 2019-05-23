@@ -2,8 +2,8 @@
 //  BHScanDevice.h
 //  BHScanController
 //
-//  Created by tianfengyu on 2017/6/9.
-//  Copyright © 2017年 Bihacat. All rights reserved.
+//  Created by bihacat on 2017/6/9.
+//  Copyright © 2017年 bihacat. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

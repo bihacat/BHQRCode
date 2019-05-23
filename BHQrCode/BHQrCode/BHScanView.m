@@ -2,8 +2,8 @@
 //  BHScanView.m
 //  BHScanController
 //
-//  Created by tianfengyu on 2017/6/9.
-//  Copyright © 2017年 Bihacat. All rights reserved.
+//  Created by bihacat on 2017/6/9.
+//  Copyright © 2017年 bihacat. All rights reserved.
 //
 
 #import "BHScanView.h"
@@ -88,6 +88,7 @@ typedef NS_ENUM(NSUInteger, LineMoveDirect) {
     _introduceLabel.text = @"将二维码/条码放入框内，即可自动扫描。";
     _introduceLabel.textColor = UIColor.whiteColor;
     _introduceLabel.font = [UIFont systemFontOfSize:14];
+    _introduceLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:_introduceLabel];
 }
 
