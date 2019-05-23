@@ -56,6 +56,7 @@ NSLog(@"%@", string); // "http://www.bihacat.com"
 |introduceFont|UIFont|提示文字字体||
 |introduceTextColor|UIColor|提示文字颜色|UIColor.whiteColor|
 |introduceFrame|CGRect|提示文字位置|-|
+|introduceTextAlignment|NSNSTextAlignment|提示文字对齐方式|NSNSTextAlignmentCenter|
 |appName|NSString|无拍照权限时提示的应用名|当前应用名|
 |navigationTintColor|UIColor|导航栏文字、按钮颜色|白色|
 |navigationBarAlpha|CGFloat|导航栏透明度|0 白色透明|
