@@ -1,13 +1,19 @@
 # BHQrCode
 
+# Dependency
+```
+TZImagePickerController (3.2.0)
+```
+
 # Install
 ```
 pod 'BHQrCode'
 ```
 
-# Description
-支持push和present方式跳转到二维码扫描页
+# Use
+
 ```
+// push方式会使用原有导航栏
 BHScanController *scan = [[BHScanController alloc] initWithScanComplete:^(NSString *result, BHScanController *capture) {
     NSLog(@"the result is %@", result);
 }];
@@ -15,27 +21,27 @@ BHScanController *scan = [[BHScanController alloc] initWithScanComplete:^(NSStri
 ```
 
 ```
+// present方式可以自定义导航栏
 BHScanController *scan = [[BHScanController alloc] initWithScanComplete:^(NSString *result, BHScanController *capture) {
     NSLog(@"the result is %@", result);
 }];
 [self presentViewController:scan animated:true completion:nil];
 ```
 
-识别指定二维码内容
 ```
-NSArray *string = [BHScanTools identify:img];
-NSLog(@"%@", string);
-```
-
-生成二维码图片
-
-```
-UIImage *img = [BHScanTools generate:@"This is My Img" width:400];
+// 生成二维码图片
+UIImage *img = [BHScanTools generate:@"http://www.bihacat.com" width:400];
 UIImageView *imgV = [[UIImageView alloc] initWithImage:img];
 [self.view addSubview:imgV];
 ```
 
-Apis
+```
+// 识别指定二维码内容
+NSString *string = [BHScanTools identify:img].firstObject;
+NSLog(@"%@", string); // "http://www.bihacat.com"
+```
+
+# Apis
 
 |属性|类型|备注|默认值|
 |---|---|---|---|
